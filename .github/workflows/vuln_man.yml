@@ -64,7 +64,7 @@ jobs:
        uses: actions/upload-artifact@v4
        with:
          name: sbom-${{matrix.project}}-docker
-         path: "/path/to/output/bom.json"
+         path: "${{ matrix.project }}_bom_docker.json"
          retention-days: 5
          if-no-files-found: error
 
